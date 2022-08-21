@@ -6,12 +6,11 @@ function isIsogram($string) {
     foreach($compare as $letter){
         $uniq = array_unique($compare);
     }
-    $final = 1;
+    $final=1;
     foreach($uniq as $result){
-        $num = intval($result);
+        $num = $result;
         $final =+ $final * $num;
     }
-
     if($final == 1){
         return true;
     }
