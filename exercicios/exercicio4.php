@@ -9,43 +9,23 @@ function accum($s) {
     $result = "";
     $final = "";
     foreach($word as $letter){
-            $cont1 ++;
-            $num = $cont1;
-            while($num > 0){
-                $cont2++;
-                if($cont2 == 1){
-                    if($cont1 > 1){ $trace = "-";}
-                    $result .= $trace.strtoupper($letter);
-                }else{
-                    $result .= strtolower($letter);
+                $cont1 ++;
+                $num = $cont1;
+                while($num > 0){
+                    $cont2++;
+                    if($cont2 == 1){
+                        if($cont1 > 1){ $trace = "-";}
+                        $result .= $trace.strtoupper($letter);
+                    }else{
+                        $result .= strtolower($letter);
+                    }
+                $num --;
                 }
-            $num --;
-            
-            }
-            $cont2 = 0;
+        $cont2 = 0;
+    }
+    $final .= $result;
+    return $final; 
 }
-$final .= $result;
-return $final; 
-
-    
-
-
-
-
-
-
-
-
-
-}
-
-       
-
-
-
-
-
-
 
 echo accum("ZpglnRxqenU")."<p>";
 echo accum("NyffsGeyylB")."<p>";
