@@ -1,3 +1,1 @@
-<?php
-
-echo "Rodapé da página";
+        </div></body></html>
