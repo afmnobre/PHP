@@ -1,0 +1,52 @@
+/*STYLE.CSS*/
+@import url('http://fonts.cdnfonts.com/css/nasalization-2');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Verdana,sans-serif;
+    font-size:13px; color:#333;
+}
+header{
+    height: 110px;
+    padding: 10px 0;
+    background-color: #262626;
+}
+footer{
+    height: 50px;
+    padding: 10px 0;
+    background-color: #262626;
+    text-align: center;
+    color: #FFFFFF;
+}
+h1{
+    font-family: Nasalization,sans-serif;
+    size=14;
+}
+/* CLASS */
+.container{
+    margin: 0 auto;
+    width: 960px;
+}
+
+/* IDs */
+#conteudo{
+    padding: 30px 0;
+    background-color: #FFFFFF;
+}
+#menu{
+    float: right;
+    padding: 45px 0;
+}
+#menu a{
+    font-family: Nasalization,sans-serif;
+    font-size:19px;
+    color: #FF0000;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+#menu a:hover{
+        color:#FFFFFF;
+}
