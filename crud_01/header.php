@@ -8,13 +8,15 @@
     <body>
         <header>
             <div class="container">
-                <img src="img/nasa_branco.png" width=120 title="Logo" alt="Logo">
-                <div id=menu>
-                    <a href="#">Programas Espaciais</a>
-                    <a href="#">Lançamentos</a>
-                    <a href="#">Astronautas</a>
-                    <a href="#">Foguetes</a>
-                    <a href="#">Missões</a>
+                <a href="index.php?pagina=view_administracao">
+                    <img src="img/nasa_branco.png" width=120 title="Logo" alt="Logo">
+                </a>
+                <div id="menu">
+                    <a href="index.php?pagina=view_programasespaciais">Programas Espaciais</a>
+                    <a href="index.php?pagina=view_lancamentos">Lançamentos</a>
+                    <a href="index.php?pagina=view_astronautas">Astronautas</a>
+                    <a href="index.php?pagina=view_foguetes">Foguetes</a>
+                    <a href="index.php?pagina=view_missoes">Missões</a>
                 </div>
             </div>
         </header>

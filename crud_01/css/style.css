@@ -14,26 +14,80 @@ header{
     background-color: #262626;
 }
 footer{
+    position: absolute;
     height: 50px;
+    width: 100%;
     padding: 10px 0;
+    bottom: 0px;
     background-color: #262626;
     text-align: center;
-    color: #FFFFFF;
+    padding: 25px 0 0 0;
+    color: #FF0000;
+    text-shadow: 1px 1px 1px #FFFFFF;
 }
 h1{
     font-family: Nasalization,sans-serif;
-    size=14;
+    font-size:40px;
+    text-align: center;
+}
+h4{
+    font-size:20px;
+    font-family: Nasalization,sans-serif;
+    margin-bottom: 10px;
+    padding-top: 20px;
 }
 /* CLASS */
 .container{
     margin: 0 auto;
     width: 960px;
 }
+.boxinfo{
+    background-image: url("../img/fundo_png/img_1.png");
+    width:950px;
+    height:580px;
+    padding: 5px;
+    margin: 0 auto;
+}
+.boxinfo p{
+    float: left;
+    width:380px;
+    font-size:1em;
+    line-height:1.4em;
+    text-indent:2em;
+    text-align:justify;
+    padding: 40px 0 0 0;
+}
+.boxinfo img{
+    float: right;
+}
+.sociais{
+    float:right;
+}
+.sociais a{
+    text-decoration: none;
+}
+.menu_administracao{
+    margin: 0 auto;
+    background-image: url("../img/fundo_png/img_18.png");
+    width:880px;
+    height:580px;
+}
+.menu_administracao .row{
+    margin: auto;
+    padding: 30px 30px 30px 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu_administracao a{
+    font-size:20px;
+    font-family: Nasalization,sans-serif;
+    text-decoration:none;
+    color:#0000FF;
+}
 
 /* IDs */
 #conteudo{
     padding: 30px 0;
-    background-color: #FFFFFF;
 }
 #menu{
     float: right;
@@ -50,3 +104,4 @@ h1{
 #menu a:hover{
         color:#FFFFFF;
 }
+

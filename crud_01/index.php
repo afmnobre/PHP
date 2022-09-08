@@ -2,11 +2,14 @@
 # Base de dados
 include 'db.php';
 
-#cabeçalho da pagina
+# Cabeçalho da pagina
 include 'header.php';
 
-#Conteudo da pagina
-include 'views/home.php';
+# Conteudo da Pagina
+$pagina = 'views/'.$_GET['pagina'].'.php';
+if($pagina <> ""){
+    include $pagina;
+}
 
-#Rodapé da Página
+# Rodapé da Página
 include 'footer.php';
