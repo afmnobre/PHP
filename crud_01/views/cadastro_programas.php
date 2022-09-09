@@ -1,6 +1,5 @@
 <h1>Cadastro de Programas Espaciais</h1>
 <hr>
-
 <form class="form-style" enctype="multipart/form-data" action="index.php?pagina=gravar_programa" method="post">
     <ul>
         <li>
