@@ -15,9 +15,9 @@ echo "<h4>Inicio:</h4>".
 echo "<h4>Link:</h4>".$linha['programa_url_artigo'];
 echo "<p>".$linha['programa_texto']."</p>";
 
-echo base64_decode($linha['programa_imagem']);
-echo '<img src="data:image/gif;base64,' . $linha['programa_imagem'] . '" />';
+
+echo '<img width=500px src="data:image/jpg;base64,'.base64_encode($linha["programa_imagem"]).'">';
 echo "</div>";
 
 
-    }
+}
