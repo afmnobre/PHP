@@ -11,13 +11,13 @@
             </div>
             <div class="col">
                 <a href="index.php?pagina=cadastro_lancamentos">
-                 <img src="img/nasa_icons/asteroid-64.png">
+                <img src="img/nasa_icons/asteroid-64.png">
                 Lançamentos
                 </a>
             </div>
             <div class="col">
                 <a href="index.php?pagina=cadastro_astronautas">
-                 <img src="img/nasa_icons/astronaut-64.png">
+                <img src="img/nasa_icons/astronaut-64.png">
                 Astronautas
                 </a>
             </div>
