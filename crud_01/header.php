@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
     <head>
         <title>NASA - National Aeronautics and Space Administration</title>
         <meta charset="utf-8">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
+        <link href="css/administracao.css" rel="stylesheet">
     </head>
     <body>
         <header>

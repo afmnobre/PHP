@@ -1,0 +1,19 @@
+.menu_administracao{
+    margin: 0 auto;
+    background-image: url("../img/fundo_png/img_18.png");
+    width:880px;
+    height:580px;
+}
+.menu_administracao .row{
+    margin: auto;
+    padding: 30px 30px 30px 30px;
+    width: 400px;
+    text-align: left;
+}
+.menu_administracao a{
+    font-size:20px;
+    font-family: Nasalization,sans-serif;
+    text-decoration:none;
+    color:#0000FF;
+}
+

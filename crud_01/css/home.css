@@ -1,0 +1,19 @@
+.boxinfo{
+    background-image: url("../img/fundo_png/img_1.png");
+    width:950px;
+    height:580px;
+    padding: 5px;
+    margin: 0 auto;
+}
+.boxinfo p{
+    float: left;
+    width:380px;
+    font-size:1em;
+    line-height:1.4em;
+    text-indent:2em;
+    text-align:justify;
+    padding: 40px 0 0 0;
+}
+.boxinfo img{
+    float: right;
+}
