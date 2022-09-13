@@ -8,7 +8,6 @@
         </li>
         <li>
             <input class="field-style field-split align-left" type="text" name="txt_programa_link" placeholder="Link do Programa">
-
             <input class="field-style field-split align-right" type="text" name="txt_programa_anofim" placeholder="Ano fim">
         </li>
         <li>
@@ -21,7 +20,7 @@
             <input class="field-style" type="file" name="img_programa" placeholder="Imagem do Programa">
         </li>
         <li>
-            <input type="hidden" name="pagina" value="index.php?pagina=gravar_programa">
+            <input type="hidden" name="pagina" value="index.php?pagina=adm_programasespaciais">
             <input type="submit" value="Gravar">
         </li>
     </ul>

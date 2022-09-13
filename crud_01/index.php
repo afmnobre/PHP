@@ -6,9 +6,9 @@ include 'db.php';
 include 'header.php';
 
 # Conteudo da Pagina
-$pagina = 'views/'.$_GET['pagina'].'.php';
+@$pagina = 'views/'.$_GET['pagina'].'.php';
 echo $pagina;
-if($pagina <> ""){include $pagina;}
+if($pagina <> "views/.php"){include $pagina;}else{include "views/home.php";}
 
 # Rodapé da Página
 include 'footer.php';
