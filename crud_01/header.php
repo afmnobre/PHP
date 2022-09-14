@@ -6,6 +6,7 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
         <link href="css/home.css" rel="stylesheet">
+        <link href="css/table.css" rel="stylesheet">
         <link href="css/administracao.css" rel="stylesheet">
     </head>
     <body>

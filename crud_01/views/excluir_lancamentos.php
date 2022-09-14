@@ -1,9 +1,6 @@
-<h1>Cadastro de Futuros Lançamentos</h1>
-<hr>
+<?php
 
-<div id="sample">
-  <h4>Especificação sobre o Lançamento:</h4>
-  <textarea name="area" id="area" style="width:70%;height:200px;">
-       Some Initial Content was in this textarea
-  </textarea>
-</div>
+$id = $_GET['id'];
+$query = "DELETE FROM calendario WHERE calendario_id=".$id;
+$conexao->query($query);
+header("location: index.php?pagina=adm_lancamentos");

@@ -1,9 +1,24 @@
-<h1>Cadastro de Futuros Lançamentos</h1>
-<hr>
+<?php
 
-<div id="sample">
-  <h4>Especificação sobre o Lançamento:</h4>
-  <textarea name="area" id="area" style="width:70%;height:200px;">
-       Some Initial Content was in this textarea
-  </textarea>
-</div>
+$id             = $_POST['id'];
+$datalancamento = $_POST['txt_data_lancamento'];
+$status         = $_POST['cmb_status'];
+$texto          = $_POST['txt_texto_lancamento'];
+
+$data = explode("/",$datalancamento);
+$datagravar = $data[2]."-".$data[1]."-".$data[0];
+
+
+
+$query = "UPDATE
+            calendario
+        SET
+            calendario_data='".$datagravar."',
+            calendario_status='".$status."',
+            calendario_texto='".$texto."'
+        WHERE
+            calendario_id=".$id;
+
+$conexao->query($query);
+
+header("location: index.php?pagina=adm_lancamentos");

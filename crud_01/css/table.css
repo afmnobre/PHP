@@ -1,0 +1,24 @@
+.tabela{
+    background-image:url('../img/fundo_png/img_15.png');
+}
+.tabela .campo{
+    width: 200px;
+    border: solid 1px #262626;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    background-color: rgba(0, 117, 219, 0.22);
+}
+.tabela .campo a{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+.tabela .campo .titulo{
+    font-family: Nasalization,sans-serif;
+    background-color:#262626;
+    color:#FFFFFF;
+    text-align:center;
+}
+
+
