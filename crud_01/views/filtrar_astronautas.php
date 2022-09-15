@@ -24,7 +24,8 @@ foreach($astronauta as $linha){
     }
     if($campo == "astronauta_pais"){
         $pais = $linha['astronauta_pais'];
-        echo "<div class='campo'><div class='titulo'><a href='index.php?pagina=listar_astronautas&campo=astronauta_pais&valor=$pais'>".$linha['astronauta_pais']."</a></div></div>";
+        $img = str_replace(" ","_",$pais);
+        echo "<div class='campo'><div class='titulo'><a href='index.php?pagina=listar_astronautas&campo=astronauta_pais&valor=$pais'>".$linha['astronauta_pais']."<br><img width=100px height=50px src='img/flags/$img.png'></a></div></div>";
     }
 }
 echo "</div>";

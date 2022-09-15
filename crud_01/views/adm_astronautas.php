@@ -1,6 +1,6 @@
 <h1>Administração e cadastro de Astronautas</h1>
 <hr>
-
+<a href="index.php?pagina=cadastro_astronautas">Cadastro de Astronautas</a>
 <h4>Listar Astronautas Por:</h4>
 <div class='tabela'>
         <div class='campo'>

@@ -33,16 +33,5 @@ if($imagem != NULL){
 else{
     echo"Você não realizou o upload de forma satisfatória.";
 }
- echo "INSERT INTO programas(programa_ano_inicio,
-                            programa_ano_fim,
-                            programa_nome,
-                            programa_imagem,
-                            programa_url_artigo,
-                            programa_texto)
-                        VALUES('$inicio',
-                            '$fim',
-                            '$titulo',
-                            '$mysqlImg',
-                            '$link',
-                            '$texto')";
+
 

@@ -6,15 +6,24 @@ $campo = $_GET['campo'];
 
 if ($campo == "astronauta_pais"){
     $query = "SELECT * FROM `astronautas` WHERE astronauta_pais='$valor' ORDER BY astronauta_nome ASC";
+    $conta = "SELECT COUNT(astronauta_id) as TOTAL FROM `astronautas` WHERE astronauta_pais ='$valor'";
     $frase = "do País ".$valor;
 }else{
     $query = "SELECT * FROM `astronautas` WHERE astronauta_nave='$valor' ORDER BY astronauta_nome ASC";
     $frase = "da Nave";
 }
 
-
 $astronauta = $conexao->query($query);
-echo "<h4>Astronautas $frase</h4>";
+
+if ($campo == "astronauta_pais"){
+    $total = $conexao->query($conta);
+    foreach($total as $resultado){
+        echo "<h4>Astronautas $frase - Total: ".$resultado['TOTAL']."</h4>";
+    }
+}else{
+        echo "<h4>Astronautas $frase</h4>";
+}
+
 
 echo "<div class='tabela'>";
 foreach($astronauta as $linha){

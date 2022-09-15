@@ -2,6 +2,9 @@
 # Base de dados
 include 'db.php';
 
+# Funções em PHP
+include 'utils/funcoes.php';
+
 # Cabeçalho da pagina
 include 'header.php';
 
