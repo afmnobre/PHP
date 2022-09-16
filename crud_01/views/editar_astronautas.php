@@ -11,7 +11,7 @@ foreach($astronauta as $linha){
 <hr>
 
 
-<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=gravar_astronautas" method="post">
+<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=alterar_astronautas" method="post">
     <ul>
         <li>
         <input class="field-style field-split align-left" type="text" name="txt_astronauta_nome" value='<?php echo $linha['astronauta_nome']; ?>'>
@@ -23,7 +23,7 @@ foreach($astronauta as $linha){
         </l1>
         <li>
         <input class="field-style field-split align-left" type="text" name="txt_astronauta_link" value='<?php echo $linha['astronauta_link']; ?>'>
-        <input class="field-style field-split align-right" type="text" name="txt_astronauta_data_morte" value='<?php echo $linha['astronauta_data_morte']; ?>'>
+        <input class="field-style field-split align-right" type="text" name="txt_astronauta_data_morte" value=<?php if($linha['astronauta_data_morte'] <> ""){ echo DataMostrar($linha['astronauta_data_morte']); }?>>
         </l1>
         <li>
             <h4>Fato Especial:</h4>
@@ -33,10 +33,15 @@ foreach($astronauta as $linha){
         </li>
         <li>
             <input class="field-style align-left" type="file" name="img_foto_astronauta" placeholder="Foto do Astronauta">
-            <input class="field-style align-right"type="checkbox" name="status" value="A">
-            <input type="label" disabled class="align-right" value="Ativo?">
+            <input class="field-style align-right"type="checkbox" name="alterarfoto" value="alterar">
+            <input type="label" class="field-style align-right" disabled value="Alterar Foto?">
         </li>
         <li>
+            <input class="field-style align-right" type="checkbox" name="status" value="A" <?php if($linha['astronauta_status']== "A"){ echo "checked"; } ?>>
+            <input type="label" class="field-style align-right" disabled value="Ativo?">
+        </li>
+        <li>
+            <input type="hidden" name="id" value="<?php echo $linha['astronauta_id']; ?>">
             <input class="field-style align-left" type="submit" value="gravar">
         </li>
     </ul>
