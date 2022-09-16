@@ -18,14 +18,14 @@ foreach($astronauta as $linha){
     if($campo == "astronauta_nave"){
         $nave = $linha['astronauta_nave'];
         echo "<div class='campo'>";
-        echo "<div class='titulo'><a href='index.php?pagina=listar_astronautas&campo=astronauta_nave&valor=$nave'>".$linha['astronauta_nave']."</a></div>";
+        echo "<div class='titulo'><a href='index.php?pagina=astronautas/listar_astronautas&campo=astronauta_nave&valor=$nave'>".$linha['astronauta_nave']."</a></div>";
         echo "<div class=''>".$linha['astronauta_ano_lancamento']."</div>";
         echo "</div>";
     }
     if($campo == "astronauta_pais"){
         $pais = $linha['astronauta_pais'];
         $img = str_replace(" ","_",$pais);
-        echo "<div class='campo'><div class='titulo'><a href='index.php?pagina=listar_astronautas&campo=astronauta_pais&valor=$pais'>".$linha['astronauta_pais']."<br><img width=100px height=50px src='img/flags/$img.png'></a></div></div>";
+        echo "<div class='campo'><div class='titulo'><a href='index.php?pagina=astronautas/listar_astronautas&campo=astronauta_pais&valor=$pais'>".$linha['astronauta_pais']."</div><img width=100px height=50px src='img/flags/$img.png'></a></div>";
     }
 }
 echo "</div>";

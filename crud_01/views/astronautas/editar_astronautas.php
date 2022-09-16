@@ -11,7 +11,7 @@ foreach($astronauta as $linha){
 <hr>
 
 
-<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=alterar_astronautas" method="post">
+<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=astronautas/alterar_astronautas" method="post">
     <ul>
         <li>
         <input class="field-style field-split align-left" type="text" name="txt_astronauta_nome" value='<?php echo $linha['astronauta_nome']; ?>'>

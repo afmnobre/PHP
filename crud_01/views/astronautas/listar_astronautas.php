@@ -29,23 +29,23 @@ foreach($astronauta as $linha){
         echo "<div class='campo'>";
             echo "<div class='texto'>";
                 echo "<div class='titulo'>".$linha['astronauta_nome']."</div>";
-                echo "<div class=''>Ano da Missão ".$linha['astronauta_ano_lancamento']."</div>";
-                echo "<div class=''>".$linha['astronauta_pais']."</div>";
-                echo "<div class=''>Nave ".$linha['astronauta_nave']."</div>";
-                echo "<div class=''>Link ".$linha['astronauta_link']."</div>";
-                echo "<div class=''>Morte ".$linha['astronauta_data_morte']."</div>";
-                echo "<div class=''>Status ".$linha['astronauta_status']."</div>";
+                echo "<img width=15px src=img/nasa_icons/missao.png> Ano: ".$linha['astronauta_ano_lancamento']."<br>";
+                echo "<img width=15px src=img/nasa_icons/pais.png> ".$linha['astronauta_pais']."<br>";
+                echo "<img width=15px src=img/nasa_icons/nave.png> ".$linha['astronauta_nave']."<br>";
+                echo "<img width=15px src=img/nasa_icons/wiki.png> Biografia:<a target=_blank href=".$linha['astronauta_link']."> LINK</a><br>";
+                echo "<img width=15px src=img/nasa_icons/morte.png>".$linha['astronauta_data_morte']."<br>";
+                if($linha['astronauta_status']=='A'){ echo "<img width=15px src=img/nasa_icons/ok.png>"; }else{ echo "<img width=15px src=img/nasa_icons/notok.png>"; } ;
             echo "</div>";
             echo "<div class='foto'>";
             if(empty($linha['astronauta_foto']) != NULL ){
                 echo "<img width=100px src='img/nasa_icons/semfoto.png'>";
             }else{
-                echo "<img width=100px src='data:image/jpg;base64,".base64_encode($linha['astronauta_foto'])."'>";
+                echo "<img width=100px height=150px src='data:image/jpg;base64,".base64_encode($linha['astronauta_foto'])."'>";
             }
             echo "</div>";
             echo "<div class='controles'>";
-                echo "<a href='index.php?pagina=editar_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/editar.png'></a>";
-                echo "<a href='index.php?pagina=excluir_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/excluir.png'></a>";
+                echo "<a href='index.php?pagina=astronautas/editar_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/editar.png'></a>";
+                echo "<a href='index.php?pagina=astronautas/excluir_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/excluir.png'></a>";
             echo "</div>";
         echo "</div>";
     }
@@ -56,9 +56,9 @@ foreach($astronauta as $linha){
                 echo "<img width=15px src=img/nasa_icons/missao.png> Ano: ".$linha['astronauta_ano_lancamento']."<br>";
                 echo "<img width=15px src=img/nasa_icons/pais.png> ".$linha['astronauta_pais']."<br>";
                 echo "<img width=15px src=img/nasa_icons/nave.png> ".$linha['astronauta_nave']."<br>";
-                echo "Bio: <a href=".$linha['astronauta_link']."><img width=15px src=img/nasa_icons/wiki.png></a><br>";
-                echo "<div class=''>Morte ".$linha['astronauta_data_morte']."</div>";
-                echo "<div class=''>Status ".$linha['astronauta_status']."</div>";
+                echo "<img width=15px src=img/nasa_icons/wiki.png> Biografia:<a target=_blank href=".$linha['astronauta_link']."> LINK</a><br>";
+                echo "<img width=15px src=img/nasa_icons/morte.png>".DataMostrar($linha['astronauta_data_morte'])."<br>";
+                if($linha['astronauta_status']=='A'){ echo "<img width=15px src=img/nasa_icons/ok.png>"; }else{ echo "<img width=15px src=img/nasa_icons/notok.png>"; } ;
             echo "</div>";
             echo "<div class='foto'>";
             if(empty($linha['astronauta_foto']) != NULL ){
@@ -68,8 +68,8 @@ foreach($astronauta as $linha){
             }
             echo "</div>";
             echo "<div class='controles'>";
-                echo "<a href='index.php?pagina=editar_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/editar.png'></a>";
-                echo "<a href='index.php?pagina=excluir_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/excluir.png'></a>";
+                echo "<a href='index.php?pagina=astronautas/editar_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/editar.png'></a>";
+                echo "<a href='index.php?pagina=astronautas/excluir_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/excluir.png'></a>";
             echo "</div>";
         echo "</div>";
     }

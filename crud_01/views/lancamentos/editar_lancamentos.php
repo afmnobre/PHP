@@ -11,7 +11,7 @@ $calendario = $conexao->query($query);
 foreach($calendario as $linha){
 ?>
 
-<form class="form-style" name="lancamentos" method="post" action="index.php?pagina=alterar_lancamentos">
+<form class="form-style" name="lancamentos" method="post" action="index.php?pagina=lancamentos/alterar_lancamentos">
     <ul>
         <li>
             <?php

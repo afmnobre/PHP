@@ -16,11 +16,11 @@
                     <img src="img/nasa_branco.png" width=120 title="Logo" alt="Logo">
                 </a>
                 <div id="menu">
-                    <a href="index.php?pagina=view_programasespaciais">Programas Espaciais</a>
-                    <a href="index.php?pagina=view_lancamentos">Lançamentos</a>
-                    <a href="index.php?pagina=view_astronautas">Astronautas</a>
-                    <a href="index.php?pagina=view_foguetes">Foguetes</a>
-                    <a href="index.php?pagina=view_missoes">Missões</a>
+                    <a href="index.php?pagina=programasespaciais/view_programasespaciais">Programas Espaciais</a>
+                    <a href="index.php?pagina=lancamentos/view_lancamentos">Lançamentos</a>
+                    <a href="index.php?pagina=astronautas/view_astronautas">Astronautas</a>
+                    <a href="index.php?pagina=foguetes/view_foguetes">Foguetes</a>
+                    <a href="index.php?pagina=missoes/view_missoes">Missões</a>
                 </div>
             </div>
         </header>

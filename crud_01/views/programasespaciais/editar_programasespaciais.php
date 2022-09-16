@@ -6,7 +6,7 @@
     $programas = $conexao->query($query);
     foreach($programas as $linha){
 ?>
-<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=alterar_programas" method="post">
+<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=programasespaciais/alterar_programasespaciais" method="post">
     <ul>
         <li>
         <input class="field-style field-split align-left" value="<?php echo $linha['programa_nome']; ?>" type="text" name="txt_programa_nome">
@@ -28,7 +28,7 @@
             <input class="field-style align-right" type="file" name="img_programa" placeholder="Imagem do Programa">
         </li>
         <li>
-            <input type="hidden" name="pagina" value="index.php?pagina=alterar_programas">
+            <input type="hidden" name="pagina" value="index.php?pagina=programasespaciais/alterar_programasespaciais">
             <input type="hidden" name="id" value="<?php echo $linha['programa_id']; ?>">
             <input type="submit" value="Alterar">
         </li>

@@ -40,7 +40,7 @@ if(empty($_FILES['img_foto_astronauta']['size'] == false)){
                 '$fato',
                 '$morte',
                 '$status')");
-        header("location: index.php?pagina=adm_astronautas");
+        header("location: index.php?pagina=astronautas/adm_astronautas");
     }
 }else{
     $query = "INSERT INTO
@@ -63,6 +63,6 @@ if(empty($_FILES['img_foto_astronauta']['size'] == false)){
                 '$morte',
                 '$status')";
         $conexao->query($query);
-        header("location: index.php?pagina=adm_astronautas");
+        header("location: index.php?pagina=astronautas/adm_astronautas");
 }
 

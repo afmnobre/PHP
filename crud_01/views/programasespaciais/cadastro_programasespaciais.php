@@ -1,6 +1,6 @@
 <h1>Cadastro de Programas Espaciais</h1>
 <hr>
-<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=gravar_programa" method="post">
+<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=programasespaciais/gravar_programaespaciais" method="post">
     <ul>
         <li>
             <input class="field-style field-split align-left" placeholder="Título" type="text" name="txt_programa_nome">
@@ -20,7 +20,7 @@
             <input class="field-style" type="file" name="img_programa" placeholder="Imagem do Programa">
         </li>
         <li>
-            <input type="hidden" name="pagina" value="index.php?pagina=adm_programasespaciais">
+            <input type="hidden" name="pagina" value="index.php?pagina=programasespaciais/adm_programasespaciais">
             <input type="submit" value="Gravar">
         </li>
     </ul>

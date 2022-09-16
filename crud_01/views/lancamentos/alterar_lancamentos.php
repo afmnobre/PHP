@@ -21,4 +21,4 @@ $query = "UPDATE
 
 $conexao->query($query);
 
-header("location: index.php?pagina=adm_lancamentos");
+header("location: index.php?pagina=lancamentos/adm_lancamentos");

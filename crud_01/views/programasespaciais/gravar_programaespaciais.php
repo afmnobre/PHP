@@ -1,7 +1,5 @@
 <?php
 
-include('db.php');
-
 $titulo = $_POST['txt_programa_nome'];
 $inicio = $_POST['txt_programa_anoinicio'];
 $fim    = $_POST['txt_programa_anofim'];
@@ -27,7 +25,7 @@ if($imagem != NULL){
                             '$mysqlImg',
                             '$link',
                             '$texto')");
-        header("location: index.php?pagina=cadastro_programas");
+        header("location: index.php?pagina=programasespaciais/cadastro_programasespaciais");
     }
  }
 else{

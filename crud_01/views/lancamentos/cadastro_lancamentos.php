@@ -2,7 +2,7 @@
 <hr>
 
 
-<form class="form-style" name="lancamentos" method="post" action="index.php?pagina=gravar_lancamentos">
+<form class="form-style" name="lancamentos" method="post" action="index.php?pagina=lancamentos/gravar_lancamentos">
     <ul>
         <li>
             <input class="field-style field-split align-left" type="text" name="txt_data_lancamento" placeholder="DD/MM/AAAA">

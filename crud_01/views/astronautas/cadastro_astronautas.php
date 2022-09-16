@@ -1,6 +1,6 @@
 <h1>Cadastro de Astronautas</h1>
 <hr>
-<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=gravar_astronautas" method="post">
+<form class="form-style" enctype="multipart/form-data" action="index.php?pagina=astronautas/gravar_astronautas" method="post">
     <ul>
         <li>
             <input class="field-style field-split align-left" placeholder="Nome do Astronauta" type="text" name="txt_astronauta_nome">

@@ -69,5 +69,5 @@ foreach($astronauta as $linha){
                 //echo $link.$alterarfoto;
         }
     }
-    header("location: index.php?pagina=adm_astronautas");
+    header("location: index.php?pagina=astronautas/adm_astronautas");
 }

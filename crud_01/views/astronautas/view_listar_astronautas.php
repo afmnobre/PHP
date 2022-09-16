@@ -43,10 +43,6 @@ foreach($astronauta as $linha){
                 echo "<img width=100px height=150px src='data:image/jpg;base64,".base64_encode($linha['astronauta_foto'])."'>";
             }
             echo "</div>";
-            echo "<div class='controles'>";
-                echo "<a href='index.php?pagina=editar_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/editar.png'></a>";
-                echo "<a href='index.php?pagina=excluir_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/excluir.png'></a>";
-            echo "</div>";
         echo "</div>";
     }
     if($campo == "astronauta_pais"){
@@ -66,10 +62,6 @@ foreach($astronauta as $linha){
             }else{
                 echo "<img width=100px height=150px src='data:image/jpg;base64,".base64_encode($linha['astronauta_foto'])."'>";
             }
-            echo "</div>";
-            echo "<div class='controles'>";
-                echo "<a href='index.php?pagina=editar_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/editar.png'></a>";
-                echo "<a href='index.php?pagina=excluir_astronautas&id=".$linha['astronauta_id']."'><img width=20px src='img/nasa_icons/excluir.png'></a>";
             echo "</div>";
         echo "</div>";
     }

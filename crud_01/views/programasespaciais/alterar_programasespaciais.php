@@ -47,5 +47,5 @@ foreach($programa as $linha){
                 $conexao->query("UPDATE programas SET programa_imagem ='".$mysqlImg."' WHERE programa_id=".$id);
         }
     }
-    header("location: index.php?pagina=adm_programasespaciais");
+    header("location: index.php?pagina=programasespaciais/adm_programasespaciais");
 }
