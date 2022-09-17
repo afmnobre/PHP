@@ -12,8 +12,8 @@
         </li>
         <li>
             <input type="file" placeholder="Link da Descrição do Foguete" class="field-style field-split align-left" name="img_foguete">
-            <input type="checkbox" placeholder="Status do Foguete - Ativo/Aposentado/Em Desenvolvimento" class="field-style align-right" name="alterar_foto" value="alterar">
-            <input type="label" disabled class="align-right" value="Ativo?">
+            <!--<input type="checkbox" placeholder="" class="field-style align-right" name="incluir_foto" value="incluir">
+                <input type="label" disabled class="align-right" value="Incluir Foto?">-->
         </li>
         <li>
             <input class="field-style align-left" type="submit" value="Gravar">
