@@ -20,7 +20,7 @@
                     <a href="index.php?pagina=lancamentos/view_lancamentos">Lançamentos</a>
                     <a href="index.php?pagina=astronautas/view_astronautas">Astronautas</a>
                     <a href="index.php?pagina=foguetes/view_foguetes">Foguetes</a>
-                    <a href="index.php?pagina=missoes/view_missoes">Missões</a>
+                    <a href="index.php?pagina=feed/view_feed">Imagens</a>
                 </div>
             </div>
         </header>
