@@ -12,9 +12,10 @@ if(empty($_FILES['img_foguete']['size'] == false)){
         $tamanhoImg = filesize($nomeFinal);
         $mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
         $conexao->query("INSERT INTO foguetes(foguete_nome,foguete_pais,foguete_link,foguete_status, foguete_imagem) VALUES ('$nome','$pais','$link','$status','$mysqlImg')");
+        header("location: index.php?pagina=foguetes/adm_foguetes");
     }
 }else{
     $query = "INSERT INTO foguetes(foguete_nome,foguete_pais,foguete_link,foguete_status) VALUES ('$nome','$pais','$link','$status')";
     $conexao->query($query);
-
+    header("location: index.php?pagina=foguetes/adm_foguetes");
 }
