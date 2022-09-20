@@ -7,14 +7,14 @@
 
 
 echo "<h4>Agendamentos Cadastrados</h4>";
-    echo "<table border=1>";
+    echo "<div class='tabela'>";
     foreach ($programas as $linha) {
         $date = explode("-",$linha['calendario_data']);
         $datamostrar = $date[2]."/".$date[1]."/".$date[0];
-        echo "<tr>";
-        echo "<td width=100>".$datamostrar."</td>";
-        echo "<td>".$linha['calendario_texto']."</td>";
-        echo "</tr>";
+        echo "<div class='campo'>";
+        echo "<div class='titulo'>".$datamostrar."</div>";
+        echo "<div class='texto'>".$linha['calendario_texto']."</div>";
+        echo "</div>";
     }
-    echo "</table>";
+    echo "</div>";
 

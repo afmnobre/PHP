@@ -27,15 +27,9 @@
                 </a>
             </div>
             <div class="campo">
-                <a href="index.php?pagina=missoes/adm_missoes">
-                <div class='titulo'>Missões</div>
+                <a href="index.php?pagina=feed/view_feed">
+                <div class='titulo'>Imagens</div>
                 <img src="img/nasa_icons/rocket-64.png">
-                </a>
-            </div>
-            <div class="campo">
-                <a href="index.php?pagina=sac/adm_sac">
-                <div class='titulo'>S.A.C</div>
-                <img src="img/nasa_icons/astronomy-64.png">
                 </a>
             </div>
     </div>
