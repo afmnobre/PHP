@@ -18,7 +18,8 @@
         <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
         <script type="text/javascript">
         bkLib.onDomLoaded(function() { nicEditors.allTextAreas() }); // convert all text areas to rich text editor on that page
-        </script>
+            </script>
+        <script type="text/javascript" src="utils/validacao.js"></script>
 <style>
     .nicEdit-main {
         overflow: auto !important;
