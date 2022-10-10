@@ -246,7 +246,7 @@ echo "valor de \$x modificado = ".$x;
 
 ##################################################################################################
 echo "<hr>";
-echo "<h4>15. Funcção anônima (Closure) - Função sem nome.</h4>";
+echo "<h4>15. Função anônima (Closure) - Função sem nome.</h4>";
 
 echo "Cria uma função sem nome que pode ser chamada por uma variavel.<br>";
 
@@ -279,7 +279,7 @@ echo "\$texto();<p>";
 
 ##################################################################################################
 echo "<hr>";
-echo "<h4>17. Funcção anônima como parametro de outra função.</h4>";
+echo "<h4>17. Função anônima como parametro de outra função.</h4>";
 
 echo "Determina o valor de uma função CLOSURE e executa a closure em outra função com valor definido.<br>";
 
@@ -299,7 +299,7 @@ echo "<strong>Exemplo 2:</strong><p>";
 echo "function calculaimposto(callable \$formula){<br>";
 echo "\$impostos = [10,22,34,46,58];<p>";
 
-echo "for(\$i =0; \$i < count(\$impostos); \$i++){<br>";
+echo "for(\$i = 0; \$i < count(\$impostos); \$i++){<br>";
 echo "\$imposto[\$i] = \$formula(\$impostos[\$i]);<br>";
 echo "}<br>";
 echo "return \$impostos;<br>";
@@ -312,7 +312,6 @@ echo "});<p>";
 
 echo "<strong>Exemplo 3:</strong><p>";
 
-
 echo "function add(\$x,\$y){<br>";
 echo "return \$x + \$y();<br>";
 echo "}<p>";
@@ -320,20 +319,45 @@ echo "}<p>";
 echo "echo add(3, function(){ return 5; });<p>";
 
 
+##################################################################################################
+echo "<hr>";
+echo "<h4>18. Constantes.</h4>";
+
+echo "Diferente de uma variavel as contantes não alteram o valor e podem ser acessadas sem uso do cifrão.<br>";
+
+echo "<strong>Exemplo:</strong><p>";
+
+echo "define(\"MINHA_CONSTANTE\",\"nunca vai mudar\");<br>";
+echo "define(\"OUTRA_CONSTANTE\",\"não importa o case\", true);<br>";
+echo "define(\"PI\",3.141592);<p>";
+
+echo "echo MINHA_CONSTANTE;<br>";
+echo "echo outra_constante;<br>";
+echo "echo PI;<p>";
 
 
-function calculaimposto(callable $formula){
-$impostos = [10,22,34,46,58];
+##################################################################################################
+echo "<hr>";
+echo "<h4>19. DATE e DATETIME.</h4>";
 
-for($i =0; $i < count($impostos); $i++){
-$imposto[$i] = $formula($impostos[$i]);
-}
-return $impostos;
-}
+echo "Função que retorna Data e Hora em diversos formatos.<br>";
 
-echo $resultado = calculaimposto(function($valor){
-return $valor * 0.1;
-});
+echo "<strong>Exemplo:</strong><p>";
+
+echo "## Definindo TIMEZONE:<br>";
+echo "date_default_timezone_set('America/Sao_Paulo');<p>";
+
+echo "## Data:<br>";
+echo "echo date(\"d\");<br>";
+echo "echo date(\"d/m/y\");<p>";
+
+echo "## Hora:<br>";
+echo "echo date(\"h:i:s\");<br>";
+echo "echo date(\"d/m/y h:i:s\");<p>";
+
+
+
+
 
 
 
