@@ -153,32 +153,154 @@ echo "RESULTADO: João da Silva<p>";
 echo "<hr>";
 echo "<h4>5. MÉTODO CONSTRUTOR (__construct).</h4>";
 
+echo "Uma função executada quando é estanciado o OBJETO.<p>";
+
 echo "<strong>EXEMPLO</strong><p>";
 
-class Pessoa{
-
-    public $cpf;
-    public $nome;
-
-    function __construct(){
-        echo "Nova Pessoa";
-    }
-}
+echo "class Pessoa{<br>";
+echo "public \$cpf;<br>";
+echo "public \$nome;<br>";
+echo "function __construct(){<br>";
+echo "echo \"Nova Pessoa\";<br>";
+echo "}<br>";
+echo "}<p>";
 
 
-$pessoa = new Pessoa();
-$pessoa->nome = "maria";
-$pessoa->cpf = "123";
+echo "\$pessoa = new Pessoa();<br>";
+echo "\$pessoa->nome = \"maria\";<br>";
+echo "\$pessoa->cpf = \"123\";<p>";
 
-print $pessoa->nome;
-
-
+echo "print \$pessoa->nome;<p>";
 
 
+##################################################################################################
+echo "<hr>";
+echo "<h4>6. MÉTODO DESTRUTOR (__destruct).</h4>";
+
+echo "Uma função executada quando é estanciado o OBJETO.<p>";
+
+echo "<strong>EXEMPLO</strong><p>";
+
+echo "class Pessoa{<br>";
+echo "public \$cpf;<br>";
+echo "public \$nome;<br>";
+echo "function __construct(){<br>";
+echo "echo \"Nova Pessoa\";<br>";
+echo "}<br>";
+echo "function __destruct(){<br>";
+echo "echo \"Objeto Removido\";<br>";
+echo "}<br>";
+echo "}<p>";
+
+
+echo "\$pessoa = new Pessoa();<br>";
+echo "\$pessoa->nome = \"maria\";<br>";
+echo "\$pessoa->cpf = \"123\";<p>";
+
+echo "print \$pessoa->nome;<p>";
+
+
+##################################################################################################
+echo "<hr>";
+echo "<h4>7. HERANÇA (extends).</h4>";
+
+echo "Uma classe herda características com outra.<p>";
+
+echo "<strong>EXEMPLO</strong><p>";
+
+echo "class Pessoa{<br>";
+echo "public \$nome;<br>";
+echo "}<p>";
+
+echo "class PessoaFisica extends Pessoa{<br>";
+echo "public \$cpf;<br>";
+echo "}<p>";
+
+echo "\$a = new PessoaFisica();<br>";
+echo "\$a->nome = \"MARIA\";<br>";
+echo "\$a->cpf = 123;<p>";
+
+echo "var_dump(\$a);<p>";
+
+echo "RESULTADO: object(PessoaFisica)#1 (2) { [\"nome\"]=> string(5) \"MARIA\" [\"cpf\"]=> int(123) }";
+
+
+##################################################################################################
+echo "<hr>";
+echo "<h4>8. HERANÇA com parent ( parent::função() ).</h4>";
+
+echo "Chamando a classe da função na função filho.<p>";
+
+echo "<strong>EXEMPLO</strong><p>";
+
+echo "class Pessoa{<br>";
+echo "public \$nome;<br>";
+echo "public function falar(){<br>";
+echo "return \"Oi meu nome é \".\$this->nome;<br>";
+echo "}<br>";
+echo "}<p>";
+
+echo "class PessoaFisica extends Pessoa {<br>";
+echo "public \$cpf;<br>";
+echo "public function falar(){<br>";
+echo "return parent::falar(). \" e meu CPF é \".\$this->cpf;<br>";
+echo "}<br>";
+echo "}<p>";
+
+echo "class PessoaJuridica extends Pessoa{<br>";
+echo "public \$cnpj;<br>";
+echo "}<p>";
+
+
+echo "\$pf1 = new PessoaFisica();<br>";
+echo "\$pf1->nome = \"Maria\";<br>";
+echo "\$pf1->cpf = 123;<br>";
+echo "echo \$pf1->falar();<p>";
+
+echo "RESULTADO: Oi meu nome é Maria e meu CPF é 123";
 
 
 
+##################################################################################################
+echo "<hr>";
+echo "<h4>9. TIPOS DE VARIÁVEIS DENTRO DE UMA FUNÇÃO.</h4>";
 
+echo "Chamando a classe da função na função filho.<p>";
+
+echo "<strong>public:</strong><br>";
+echo " Torna uma variável / método disponível em qualquer lugar, outras classes e instâncias do objeto.<p>";
+
+echo "<strong>protected:</strong><br>";
+echo "escopo para fazer a sua função / variavel ser visivel em todas as classes que estendem a classe atual, incluindo a classe pai.<p>";
+
+echo "<strong>private:</strong><br>";
+echo "A função / variável só pode ser acessada dentro da propria classe.<p>";
+
+echo "<strong>EXEMPLO</strong><p>";
+
+
+echo "class Pai{<br>";
+echo "public \$publico;<br>";
+echo "protected \$protegido;";
+echo "private \$privado;<p>";
+
+echo "public function setProtegido(\$protegido){<br>";
+echo "\$this->protegido = \$protegido.\"!\";<br>";
+echo "}<p>";
+echo "}<p>";
+
+echo "class Filho extends Pai{}<p>";
+
+echo "\$pai = new Pai();<br>";
+echo "\$filho = new Filho();<br>";
+echo "\$pai->publico = \"abc\";<br>";
+echo "\$filho->publico = 123;<p>";
+
+echo "var_dump(\$pai);<br>";
+echo "var_dump(\$filho);<p>";
+
+echo "RESULTADO: object(Pai)#1 (3) { [\"publico\"]=> string(3) \"abc\" [\"protegido\":protected]=> NULL [\"privado\":\"Pai\":private]=> NULL }<br>";
+echo "RESULTADO: object(Filho)#2 (3) { [\"publico\"]=> int(123) [\"protegido\":protected]=> NULL [\"privado\":\"Pai\":private]=> NULL }";
 
 
 
