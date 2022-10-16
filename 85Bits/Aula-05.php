@@ -287,20 +287,68 @@ echo "private \$privado;<p>";
 echo "public function setProtegido(\$protegido){<br>";
 echo "\$this->protegido = \$protegido.\"!\";<br>";
 echo "}<p>";
+
+echo "public function getProtegido(){<br>";
+echo "return \$this->protegido();<br>";
 echo "}<p>";
 
-echo "class Filho extends Pai{}<p>";
+echo "private function segredo(){<br>";
+echo "return \"segredo\";<br>";
+echo "}<p>";
+
+
+echo "}<p>";
+
+
+
+echo "class Filho extends Pai{<br>";
+
+echo "public function revelarSegredo(){<br>";
+echo "return parent::segredo();<br>";
+echo "}<br>";
+echo "}<p>";
 
 echo "\$pai = new Pai();<br>";
 echo "\$filho = new Filho();<br>";
 echo "\$pai->publico = \"abc\";<br>";
-echo "\$filho->publico = 123;<p>";
+echo "\$filho->publico = 123;<br>";
+echo "\$filho->setProtegido(\"Legal\");<p>";
+
+
+echo "echo \$filho->getProtegido();<br>";
+echo "echo \$filho->protegido;<br>";
+echo "echo \$filho->revelarSegredo();<p>";
+
+echo "RESUTADO: Fatal error: Uncaught Error: Cannot access protected property Filho::\$protegido in /srv/http/programacao/PHP/85Bits/Aula-05.php:327 Stack trace: #0 {main} thrown in /srv/http/programacao/PHP/85Bits/Aula-05.php on line 327<p>";
 
 echo "var_dump(\$pai);<br>";
 echo "var_dump(\$filho);<p>";
 
-echo "RESULTADO: object(Pai)#1 (3) { [\"publico\"]=> string(3) \"abc\" [\"protegido\":protected]=> NULL [\"privado\":\"Pai\":private]=> NULL }<br>";
-echo "RESULTADO: object(Filho)#2 (3) { [\"publico\"]=> int(123) [\"protegido\":protected]=> NULL [\"privado\":\"Pai\":private]=> NULL }";
+
+echo "RESULTADO: object(Pai)#1 (3) { [\"publico\"]=> string(3) \"abc\" [\"protegido\":protected]=> NULL [\"privado\":\"Pai\":private]=> NULL } <br>";
+echo "RESULTADO: object(Filho)#2 (3) { [\"publico\"]=> int(123) [\"protegido\":protected]=> string(6) \"Legal!\" [\"privado\":\"Pai\":private]=> NULL } <p>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
