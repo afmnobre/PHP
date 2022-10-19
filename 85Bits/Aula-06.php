@@ -115,7 +115,7 @@ echo "<hr>";
 echo "<h4>5. CLASSE ABSTRATA.</h4>";
 
 echo "REGRAS:<br>";
-echo ".<p>";
+echo "Quano não precisa fazer uma tabela pessoa mas é possivel juntar as duas classes em uma abstrata.<p>";
 
 echo "<strong>EXEMPLO:</strong><p>";
 
@@ -137,4 +137,141 @@ echo "\$p = new Pessoa();<p>";
 
 echo "QUANDO SE TENTA ESTANCIAR A CLASSE ABSTRATA:<br>";
 echo "Fatal error: Uncaught Error: Cannot instantiate abstract class Pessoa in /srv/http/programacao/PHP/85Bits/Aula-06.php:136 Stack trace: #0 {main} thrown in /srv/http/programacao/PHP/85Bits/Aula-06.php on line 136";
+
+
+##################################################################################################
+echo "<hr>";
+echo "<h4>6. MÉTODO ABSTRATO.</h4>";
+
+echo "REGRAS:<br>";
+echo "Todas os Métodos abstratos que estiverem no PAI por padrão dever estar nos FILHOS.<p>";
+
+
+echo "abstract class Pessoa{<br>";
+echo "public \$nome;<br>";
+echo "public function fazAlgo(){<br>";
+
+echo "echo \"oi\";<br>";
+echo "}<br>";
+echo "abstract public function dizDocumento();<br>";
+echo "}<p>";
+
+echo "class PessoaFisica extends Pessoa{<br>";
+echo "public \$cpf;<br>";
+echo "function dizDocumento(){<br>";
+echo "echo  \$this->cpf;<br>";
+echo "}<br>";
+echo "}<br>";
+
+echo "class PessoaJuridica extends Pessoa{<br>";
+echo "public \$cnpj;<br>";
+echo "function dizDocumento(){<br>";
+echo "echo \$this->cnpj;<br>";
+echo "}<br>";
+echo "}<br>";
+echo "\$p1 = new PessoaFisica();<br>";
+echo "\$p1->cpf = 123;<br>";
+echo "\$p1->dizDocumento();<br>";
+
+
+##################################################################################################
+echo "<hr>";
+echo "<h4>7. INTERFACES.</h4>";
+
+echo "REGRAS:<br>";
+echo "1. É como se fosse um MODELO DEFAULT para uma função.<br>";
+echo "2. Intefaces permitem a criação de códigos que especificam quais métodos uma classe deve implantar, sem definir como esses metodos são tratados.<br>";
+echo "3. Todas os Métodos da interface devem ser Publicos.<p>";
+
+echo "<strong>EXEMPLO:</strong><p>";
+
+echo "interface Formatador{<br>";
+echo "public function formatar();<br>";
+echo "public function executar();<br>";
+echo "}<p>";
+
+echo "class Html implements Formatador{<br>";
+echo "public function formatar(){}<br>";
+echo "public function executar(){}<br>";
+
+echo "}<p>";
+
+
+##################################################################################################
+echo "<hr>";
+echo "<h4>8. INTERFACES COM HERANÇA MULTIPLA.</h4>";
+
+echo "<strong>EXEMPLO:</strong><p>";
+
+echo "interface Paginador{<br>";
+echo "public function paginar();<br>";
+echo "}<p>";
+
+echo "interface Arvore{<br>";
+echo "public function getNoRaiz();<br>";
+echo "}<p>";
+
+echo "interface ArvorePaginavel extends Paginador, Arvore {<br>";
+echo "}<p>";
+
+echo "class TabelaPessoa implements ArvorePaginavel{<br>";
+echo "public function paginar(){}<br>";
+echo "public function getNoRaiz(){}<br>";
+echo "};<p>";
+
+
+
+
+
+
+interface Sepultavel {
+    public function calcularValorDoCaixao(float $valor):float;
+}
+
+class Felino implements Sepultavel {
+    public $peso;
+    public function calcularValorDoCaixao(float $valor):float{
+        return $valor * ($this->peso * 0.3);
+    }
+}
+
+class Pessoa implements Sepultavel {
+    public $altura;
+    public $peso;
+    public $circunferenciaAbdominal;
+
+    public function calcularValorDoCaixao(float $valor):float{
+        return $valor * (($this->altura * $this->peso) / 2 + $this->circunferenciaAbdominal);
+    }
+}
+
+class Sepultamento {
+    public $cotacao = "4.05";
+
+    public function enterrar(Sepultavel $sepultavel):float{
+        return $sepultavel->calcularValorDoCaixao($this->cotacao);
+    }
+}
+
+$gato = new Felino();
+$gato->peso = 3.4;
+$s = new Sepultamento();
+echo $s->enterrar($gato);
+
+echo "<br>";
+
+$homem = new Pessoa();
+$homem->peso = 70;
+$homem->altura = 1.70;
+$homem->circunferenciaAbdominal = 90;
+$y = new Sepultamento();
+echo $y->enterrar($homem);
+
+
+
+
+
+
+
+
 
