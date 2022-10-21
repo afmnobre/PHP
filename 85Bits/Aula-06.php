@@ -221,51 +221,78 @@ echo "};<p>";
 
 
 
+##################################################################################################
+echo "<hr>";
+echo "<h4>9. .</h4>";
+
+echo "<strong>EXEMPLO:</strong><p>";
+
+echo "interface Sepultavel {<br>";
+echo "public function calcularValorDoCaixao(float \$valor):float;<br>";
+echo "}<p>";
+
+echo "class Felino implements Sepultavel {<br>";
+echo "public \$peso;<br>";
+echo "public function calcularValorDoCaixao(float \$valor):float{<br>";
+echo "return \$valor * (\$this->peso * 0.3);<br>";
+echo "}<br>";
+echo "}<p>";
+
+echo "class Pessoa implements Sepultavel {<br>";
+echo "public \$altura;<br>";
+echo "public \$peso;<br>";
+echo "public \$circunferenciaAbdominal;<p>";
+
+echo "public function calcularValorDoCaixao(float \$valor):float{<br>";
+echo "return \$valor * ((\$this->altura * \$this->peso) / 2 + \$this->circunferenciaAbdominal);<br>";
+echo "}<br>";
+echo "}<p>";
+
+echo "class Sepultamento {<br>";
+echo "public \$cotacao = \"4.05\";<p>";
+
+echo "public function enterrar(Sepultavel \$sepultavel):float{<br>";
+echo "return \$sepultavel->calcularValorDoCaixao(\$this->cotacao);<br>";
+echo "}<br>";
+echo "}<p>";
+
+echo "\$gato = new Felino();<br>";
+echo "\$gato->peso = 3.4;<br>";
+echo "\$s = new Sepultamento();<br>";
+echo "echo \$s->enterrar(\$gato);<p>";
+
+echo "\$homem = new Pessoa();<br>";
+echo "\$homem->peso = 70;<br>";
+echo "\$homem->altura = 1.70;<br>";
+echo "\$homem->circunferenciaAbdominal = 90;<br>";
+echo "\$y = new Sepultamento();<br>";
+echo "echo \$y->enterrar(\$homem);<p>";
+
+
+echo "RESULTADO GATO: 4.131<br>";
+echo "RESULTADO HOMEM: 605.475<p>";
 
 
 
-interface Sepultavel {
-    public function calcularValorDoCaixao(float $valor):float;
-}
 
-class Felino implements Sepultavel {
-    public $peso;
-    public function calcularValorDoCaixao(float $valor):float{
-        return $valor * ($this->peso * 0.3);
-    }
-}
 
-class Pessoa implements Sepultavel {
-    public $altura;
-    public $peso;
-    public $circunferenciaAbdominal;
 
-    public function calcularValorDoCaixao(float $valor):float{
-        return $valor * (($this->altura * $this->peso) / 2 + $this->circunferenciaAbdominal);
-    }
-}
 
-class Sepultamento {
-    public $cotacao = "4.05";
 
-    public function enterrar(Sepultavel $sepultavel):float{
-        return $sepultavel->calcularValorDoCaixao($this->cotacao);
-    }
-}
 
-$gato = new Felino();
-$gato->peso = 3.4;
-$s = new Sepultamento();
-echo $s->enterrar($gato);
 
-echo "<br>";
 
-$homem = new Pessoa();
-$homem->peso = 70;
-$homem->altura = 1.70;
-$homem->circunferenciaAbdominal = 90;
-$y = new Sepultamento();
-echo $y->enterrar($homem);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
