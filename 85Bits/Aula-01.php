@@ -7,8 +7,8 @@ ini_set('display_errors', '1');
 echo "<h1>Aula 1 de PHP</h1>";
 echo "<hr>";
 echo "<h4>COMENTARIOS</h4>";
-echo "COMENTARIO ESTIO C++ = // de uma única linha<p>";
-echo "COMENTARIO ESTIOLO SHELL = # de uma linha<p>";
+echo "COMENTARIO ESTILO C++ = // de uma única linha<p>";
+echo "COMENTARIO ESTILO SHELL = # de uma linha<p>";
 echo "COMENTARIO COM VARIAS LINHAS /* */<p>";
 
 ##################################################################################################
@@ -128,4 +128,17 @@ echo "Resultado:";
 echo $a;
 echo $b;
 
+
+##################################################################################################
 echo "<hr>";
+echo "<h4>NOWDOC e HEREDOC</h4>";
+
+echo "Para escrever textos grandes não interpretados.<p>";
+
+echo "\$nowdoc = <<<'NOW'<br>";
+echo "PHP versão \$versao!<br>";
+echo "NOW;<p>";
+
+echo "\$herec = <<<\HERE <br>";
+echo "PHP versão \$versão!<br>";
+echo "HERE;<br>";

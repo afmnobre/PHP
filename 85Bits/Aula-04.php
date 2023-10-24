@@ -633,7 +633,7 @@ echo "RESULTADO: A Camiseta Azul custa R$ 30.65.<p>";
 
 ##################################################################################################
 echo "<hr>";
-echo "<h4>20. ARRAY Collumn - (Criar novo Array com base da KEY)</h4>";
+echo "<h4>20. ARRAY Collumn - (Criar novo Array com base da KEY de outro Array)</h4>";
 
 echo "<strong>Exemplo:</strong><p>";
 

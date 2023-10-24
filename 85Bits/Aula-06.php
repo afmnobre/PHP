@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
@@ -123,7 +124,6 @@ echo "abstract class Pessoa {<br>";
 echo "public \$nome;<br>";
 echo "}<p>";
 
-echo "class PessoaFisica extends Pessoa {<br>";
 echo "public \$cpf;<br>";
 echo "}<p>";
 
@@ -223,7 +223,7 @@ echo "};<p>";
 
 ##################################################################################################
 echo "<hr>";
-echo "<h4>9. .</h4>";
+echo "<h4>9. A FUNERÁRIA.</h4>";
 
 echo "<strong>EXEMPLO:</strong><p>";
 
@@ -243,7 +243,7 @@ echo "public \$altura;<br>";
 echo "public \$peso;<br>";
 echo "public \$circunferenciaAbdominal;<p>";
 
-echo "public function calcularValorDoCaixao(float \$valor):float{<br>";
+
 echo "return \$valor * ((\$this->altura * \$this->peso) / 2 + \$this->circunferenciaAbdominal);<br>";
 echo "}<br>";
 echo "}<p>";
@@ -272,33 +272,4 @@ echo "echo \$y->enterrar(\$homem);<p>";
 echo "RESULTADO GATO: 4.131<br>";
 echo "RESULTADO HOMEM: 605.475<p>";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>

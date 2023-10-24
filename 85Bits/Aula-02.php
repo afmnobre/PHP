@@ -45,7 +45,7 @@ echo "<tr><td>!==</td><td>Não Identico</td><td>if(\$a !== \$b)</td><td>true</td
 echo "<tr><td>></td><td>Maior que</td><td>if(\$a > \$b)</td><td>true</td></tr>";
 echo "<tr><td><</td><td>Menor que</td><td>if(\$a < \$b)</td><td>false</td></tr>";
 echo "<tr><td>>=</td><td>Maior ou Igual</td><td>if(\$a >= \$b)</td><td>true</td></tr>";
-echo "<tr><td><=></td><td>Menor que</td><td>if(\$a <= \$b)</td><td>false</td></tr>";
+echo "<tr><td><=</td><td>Menor que</td><td>if(\$a <= \$b)</td><td>false</td></tr>";
 echo "<tr><td><=></td><td>Spaceship</td><td>if(\$a <=> \$b)</td><td>1</td></tr>";
 echo "<tr><td>??</td><td>Diferente (null coalescing)</td><td>\$a ?? \$b ?? \$c)</td><td>5</td></tr>";
 echo "</table><p>";
